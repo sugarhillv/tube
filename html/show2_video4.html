@@ -72,6 +72,28 @@
         .sidebar {
             width: 320px;
             flex-shrink: 0;
+            height: 100vh;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            padding-right: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #404040;
+            border-radius: 4px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #505050;
         }
         
         .sidebar-section {
@@ -206,16 +228,16 @@
         <aside class="sidebar">
             
             <div class="sidebar-section">
-                <div class="sidebar-label">Previous</div>
-                <a href="show2_video3.html" class="nav-link">
-                    <div class="nav-link-title">H480pCQ38 - Hw 003 - Chn </div>
+                <div class="sidebar-label">Next</div>
+                <a href="show2_video5.html" class="nav-link">
+                    <div class="nav-link-title">H480pCQ38 - Hw 005 - Mvng Thrgh Ssns</div>
                 </a>
             </div>
             
             <div class="sidebar-section">
-                <div class="sidebar-label">Next</div>
-                <a href="show2_video5.html" class="nav-link">
-                    <div class="nav-link-title">H480pCQ38 - Hw 005 - Mvng Thrgh Ssns</div>
+                <div class="sidebar-label">Previous</div>
+                <a href="show2_video3.html" class="nav-link">
+                    <div class="nav-link-title">H480pCQ38 - Hw 003 - Chn </div>
                 </a>
             </div>
             

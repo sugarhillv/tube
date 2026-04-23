@@ -428,6 +428,7 @@
         if (nextUrl) {
             // Try SPA loading first
             loadNextVideo(nextUrl);
+            closeOverlay();
         }
     }
     

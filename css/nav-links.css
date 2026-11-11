@@ -1,0 +1,106 @@
+/* Navigation Links */
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-raised);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border-strong);
+}
+
+.nav-link-thumbnail-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+.nav-link-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nav-link-metadata {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.nav-link-thumbnail-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-link-thumbnail-overlay.has-progress {
+    opacity: 1;
+}
+
+.nav-link-thumbnail-overlay::after {
+    content: "";
+    display: block;
+    width: var(--progress-percent, 0%);
+    height: 100%;
+    background-color: var(--color-accent);
+}
+
+.nav-link-content {
+    padding: 8px;
+}
+
+.nav-link-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text-tertiary);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.nav-link-badge-bar {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 20px;
+}
+
+.nav-link-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+}
+
+.nav-link-type {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    margin-top: 4px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists</title>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav-links.css">
+    <link rel="stylesheet" href="css/playlists.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/search-ui.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/sidebar-section.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/video-annotations.css">
+    <link rel="stylesheet" href="css/video-preview.css">
+    <script src="js/generator_config.js"></script>
+    <script src="js/site-settings.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-title">Playlists</div>
+    <div class="header-search">
+        <div class="search-input-group">
+            <span class="search-icon">&#128269;</span>
+            <input id="search-input" type="text" placeholder="Search" class="search-input">
+        </div>
+    </div>
+    <div class="header-actions">
+        <a href="playlists.html" class="header-link">Playlists</a>
+        <a href="settings.html" class="header-link header-link-settings" aria-label="Settings">
+            <span class="header-link-icon" aria-hidden="true">&#9881;</span>
+        </a>
+        <a href="index.html" class="header-link">&larr; Back to All Videos</a>
+    </div>
+</header>
+<div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+        <div class="search-modal-header">
+            <div class="search-modal-title">Search Results: <span id="search-result-count" class="search-result-count">0</span></div>
+            <button id="search-modal-close" class="search-modal-close" type="button">&times;</button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <select id="show-filter" class="filter-select" aria-label="Filter by show">
+                        <option value="all">All Shows</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+    <select id="status-filter" class="filter-select" aria-label="Filter by watch status">
+        <option value="all">All Status</option>
+        <option value="unwatched">Unwatched</option>
+        <option value="inProgress">In Progress</option>
+        <option value="nearlyFinished">Nearly Finished</option>
+        <option value="completed">Finished</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="resolution-filter" class="filter-select" aria-label="Filter by resolution">
+        <option value="all">All Resolution</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="codec-filter" class="filter-select" aria-label="Filter by codec">
+        <option value="all">All Codecs</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="fps-filter" class="filter-select" aria-label="Filter by frame rate">
+        <option value="all">All FPS</option>
+    </select>
+</div>
+                <div class="filter-group filter-duration-group">
+                    <div class="filter-range-slider">
+    <div class="filter-range-track"></div>
+    <div id="duration-range-fill" class="filter-range-fill"></div>
+    <input id="duration-min" type="range" min="0" max="3600" value="0" class="filter-range-input filter-range-min">
+    <input id="duration-max" type="range" min="0" max="3600" value="3600" class="filter-range-input filter-range-max">
+</div>
+                    <div class="filter-range-labels"><span id="duration-min-label">0:00</span> - <span id="duration-max-label">60:00</span></div>
+                </div>
+                <div class="filter-group">
+    <select id="sort-filter" class="filter-select" aria-label="Sort search results">
+        <option value="relevance">Relevance</option>
+        <option value="recent">Recent</option>
+        <option value="progress">Progress</option>
+        <option value="duration_desc">Longest</option>
+        <option value="duration_asc">Shortest</option>
+        <option value="title">Title</option>
+        <option value="show">Show</option>
+    </select>
+</div>
+            </div>
+            <div id="search-results-container"></div>
+        </div>
+    </div>
+    <div id="search-modal-backdrop"></div>
+</div>
+<main class="playlist-page" id="playlists-page">
+    <div class="playlist-page-header">
+        <h1 class="index-title">Playlists</h1>
+    </div>
+    <div class="playlist-page-empty" id="playlists-empty">No playlists yet.</div>
+    <div class="playlist-list" id="playlist-list"></div>
+</main>
+    <script src="videos_index.js"></script>
+    <script src="js/imported_playlists.js"></script>
+    <script src="js/watch-progress.js"></script>
+    <script src="js/watch-dashboard.js"></script>
+    <script src="js/search-ui.js"></script>
+    <script src="js/playlists.js"></script>
+    <script src="js/watch-queue.js"></script>
+    <script src="js/keyboard-control.js"></script>
+    <script src="js/picture-in-picture.js"></script>
+    <script src="js/video-player-controls.js"></script>
+    <script src="js/video-annotations.js"></script>
+    <script src="js/video-preview.js"></script>
+    <script src="js/video-autoplay.js"></script>
+</body>
+</html>

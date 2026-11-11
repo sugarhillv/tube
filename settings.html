@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav-links.css">
+    <link rel="stylesheet" href="css/playlists.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/search-ui.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/sidebar-section.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/video-annotations.css">
+    <link rel="stylesheet" href="css/video-preview.css">
+    <script src="js/generator_config.js"></script>
+    <script src="js/site-settings.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-title">Settings</div>
+    <div class="header-actions">
+        <a href="playlists.html" class="header-link">Playlists</a>
+        <a href="settings.html" class="header-link header-link-settings" aria-label="Settings">
+            <span class="header-link-icon" aria-hidden="true">&#9881;</span>
+        </a>
+        <a href="index.html" class="header-link">&larr; Back to All Videos</a>
+    </div>
+</header>
+<main class="settings-page" id="settings-page">
+    <div class="settings-page-header">
+        <h1 class="index-title">Settings</h1>
+        <div class="settings-page-actions">
+            <button type="button" id="settings-expand-all-button" class="settings-button settings-header-button" title="Open every settings category.">Expand All</button>
+            <button type="button" id="settings-collapse-all-button" class="settings-button settings-header-button" title="Close every settings category.">Collapse All</button>
+            <div id="settings-save-status" class="settings-status" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <details class="settings-section" aria-label="Playback">
+        <summary class="settings-section-title">Playback</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-field" title="The volume to apply when no saved volume exists yet. Use 0 for silent and 1 for full volume.">
+    <span class="settings-field-label">Default volume<span class="settings-tooltip" title="The volume to apply when no saved volume exists yet. Use 0 for silent and 1 for full volume." tabindex="0" aria-label="The volume to apply when no saved volume exists yet. Use 0 for silent and 1 for full volume.">?</span></span>
+    <input type="number" min="0" max="1" step="0.01" title="The volume to apply when no saved volume exists yet. Use 0 for silent and 1 for full volume." data-setting-path="playback.defaultVolume" data-setting-type="number">
+</label>
+
+            <label class="settings-checkbox" title="Controls whether videos begin muted before you interact with them. Browsers are much more willing to autoplay muted video.">
+    <input type="checkbox" title="Controls whether videos begin muted before you interact with them. Browsers are much more willing to autoplay muted video." data-setting-path="playback.muted" data-setting-type="boolean">
+    <span>Start muted</span>
+    <span class="settings-tooltip" title="Controls whether videos begin muted before you interact with them. Browsers are much more willing to autoplay muted video." tabindex="0" aria-label="Controls whether videos begin muted before you interact with them. Browsers are much more willing to autoplay muted video.">?</span>
+</label>
+
+            <label class="settings-field" title="The default playback rate for videos. This is also synced with the speed control in the player.">
+    <span class="settings-field-label">Playback speed<span class="settings-tooltip" title="The default playback rate for videos. This is also synced with the speed control in the player." tabindex="0" aria-label="The default playback rate for videos. This is also synced with the speed control in the player.">?</span></span>
+    <select title="The default playback rate for videos. This is also synced with the speed control in the player." data-setting-path="playback.speed" data-setting-type="number">
+        <option value="0.5" title="The default playback rate for videos. This is also synced with the speed control in the player.">0.5x</option>
+        <option value="0.75" title="The default playback rate for videos. This is also synced with the speed control in the player.">0.75x</option>
+        <option value="1" title="The default playback rate for videos. This is also synced with the speed control in the player.">1x</option>
+        <option value="1.25" title="The default playback rate for videos. This is also synced with the speed control in the player.">1.25x</option>
+        <option value="1.5" title="The default playback rate for videos. This is also synced with the speed control in the player.">1.5x</option>
+        <option value="2" title="The default playback rate for videos. This is also synced with the speed control in the player.">2x</option>
+    </select>
+</label>
+
+            <label class="settings-checkbox" title="When enabled, the player can move to the next video after the current one ends. Turn it off to stop at the end of each video.">
+    <input type="checkbox" title="When enabled, the player can move to the next video after the current one ends. Turn it off to stop at the end of each video." data-setting-path="playback.autoplayEnded" data-setting-type="boolean">
+    <span>Autoplay next video</span>
+    <span class="settings-tooltip" title="When enabled, the player can move to the next video after the current one ends. Turn it off to stop at the end of each video." tabindex="0" aria-label="When enabled, the player can move to the next video after the current one ends. Turn it off to stop at the end of each video.">?</span>
+</label>
+
+            <label class="settings-checkbox" title="Remembers that you prefer sound on after you unmute once. This can reduce repeated unmute prompts during a session.">
+    <input type="checkbox" title="Remembers that you prefer sound on after you unmute once. This can reduce repeated unmute prompts during a session." data-setting-path="playback.userUnmuted" data-setting-type="boolean">
+    <span>Remember unmuted</span>
+    <span class="settings-tooltip" title="Remembers that you prefer sound on after you unmute once. This can reduce repeated unmute prompts during a session." tabindex="0" aria-label="Remembers that you prefer sound on after you unmute once. This can reduce repeated unmute prompts during a session.">?</span>
+</label>
+
+            <label class="settings-field" title="How long the next-video countdown waits before autoplay continues. Larger values give more time to cancel.">
+    <span class="settings-field-label">Autoplay countdown seconds<span class="settings-tooltip" title="How long the next-video countdown waits before autoplay continues. Larger values give more time to cancel." tabindex="0" aria-label="How long the next-video countdown waits before autoplay continues. Larger values give more time to cancel.">?</span></span>
+    <input type="number" min="1" max="120" step="1" title="How long the next-video countdown waits before autoplay continues. Larger values give more time to cancel." data-setting-path="playback.autoplayCountdownSeconds" data-setting-type="number">
+</label>
+
+        </div>
+    </details>
+    <details class="settings-section" aria-label="Progress">
+        <summary class="settings-section-title">Progress</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-checkbox" title="Shows saved watch progress on thumbnails. Turning this off hides the visual bars without deleting saved progress.">
+    <input type="checkbox" title="Shows saved watch progress on thumbnails. Turning this off hides the visual bars without deleting saved progress." data-setting-path="progressBars.visible" data-setting-type="boolean">
+    <span>Show progress bars</span>
+    <span class="settings-tooltip" title="Shows saved watch progress on thumbnails. Turning this off hides the visual bars without deleting saved progress." tabindex="0" aria-label="Shows saved watch progress on thumbnails. Turning this off hides the visual bars without deleting saved progress.">?</span>
+</label>
+
+            <label class="settings-field" title="How often the current video position is saved while a video is playing. Smaller values save more frequently.">
+    <span class="settings-field-label">Save interval ms<span class="settings-tooltip" title="How often the current video position is saved while a video is playing. Smaller values save more frequently." tabindex="0" aria-label="How often the current video position is saved while a video is playing. Smaller values save more frequently.">?</span></span>
+    <input type="number" min="250" max="60000" step="250" title="How often the current video position is saved while a video is playing. Smaller values save more frequently." data-setting-path="progressBars.saveIntervalMs" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="This is the fraction of a video left at which saved progress is treated as finished. A value of 0.04 means the last 4 percent of a video counts as complete, so the next visit starts from the beginning. Lower values resume closer to the credits; higher values mark videos complete earlier and can hide thumbnail progress sooner.">
+    <span class="settings-field-label">End reset threshold<span class="settings-tooltip" title="This is the fraction of a video left at which saved progress is treated as finished. A value of 0.04 means the last 4 percent of a video counts as complete, so the next visit starts from the beginning. Lower values resume closer to the credits; higher values mark videos complete earlier and can hide thumbnail progress sooner." tabindex="0" aria-label="This is the fraction of a video left at which saved progress is treated as finished. A value of 0.04 means the last 4 percent of a video counts as complete, so the next visit starts from the beginning. Lower values resume closer to the credits; higher values mark videos complete earlier and can hide thumbnail progress sooner.">?</span></span>
+    <input type="number" min="0" max="1" step="0.01" title="This is the fraction of a video left at which saved progress is treated as finished. A value of 0.04 means the last 4 percent of a video counts as complete, so the next visit starts from the beginning. Lower values resume closer to the credits; higher values mark videos complete earlier and can hide thumbnail progress sooner." data-setting-path="progressBars.resetThresholdPercentage" data-setting-type="number">
+</label>
+
+        </div>
+    </details>
+    <details class="settings-section" aria-label="Search">
+        <summary class="settings-section-title">Search</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-field" title="This is the minimum fuzzy-match score a video needs before it appears in search results. Higher values require closer text matches, so results feel cleaner but typos are less forgiving. Lower values catch more misspellings and partial ideas, but they can also allow unrelated videos into the result list.">
+    <span class="settings-field-label">Fuzzy threshold<span class="settings-tooltip" title="This is the minimum fuzzy-match score a video needs before it appears in search results. Higher values require closer text matches, so results feel cleaner but typos are less forgiving. Lower values catch more misspellings and partial ideas, but they can also allow unrelated videos into the result list." tabindex="0" aria-label="This is the minimum fuzzy-match score a video needs before it appears in search results. Higher values require closer text matches, so results feel cleaner but typos are less forgiving. Lower values catch more misspellings and partial ideas, but they can also allow unrelated videos into the result list.">?</span></span>
+    <input type="number" min="0" max="1" step="0.01" title="This is the minimum fuzzy-match score a video needs before it appears in search results. Higher values require closer text matches, so results feel cleaner but typos are less forgiving. Lower values catch more misspellings and partial ideas, but they can also allow unrelated videos into the result list." data-setting-path="search.fuzzyThreshold" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="This caps how many single-character edits a fuzzy match may need before it is rejected. A smaller number is stricter and can make search feel faster and more exact. A larger number tolerates heavier typos, but combined with a low fuzzy threshold it can make short searches match surprising titles.">
+    <span class="settings-field-label">Max edit distance<span class="settings-tooltip" title="This caps how many single-character edits a fuzzy match may need before it is rejected. A smaller number is stricter and can make search feel faster and more exact. A larger number tolerates heavier typos, but combined with a low fuzzy threshold it can make short searches match surprising titles." tabindex="0" aria-label="This caps how many single-character edits a fuzzy match may need before it is rejected. A smaller number is stricter and can make search feel faster and more exact. A larger number tolerates heavier typos, but combined with a low fuzzy threshold it can make short searches match surprising titles.">?</span></span>
+    <input type="number" min="0" max="20" step="1" title="This caps how many single-character edits a fuzzy match may need before it is rejected. A smaller number is stricter and can make search feel faster and more exact. A larger number tolerates heavier typos, but combined with a low fuzzy threshold it can make short searches match surprising titles." data-setting-path="search.levenshteinMaxDistance" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="The number of typed characters required before text search filtering starts. Smaller values react sooner, while larger values avoid very broad early searches.">
+    <span class="settings-field-label">Minimum query length<span class="settings-tooltip" title="The number of typed characters required before text search filtering starts. Smaller values react sooner, while larger values avoid very broad early searches." tabindex="0" aria-label="The number of typed characters required before text search filtering starts. Smaller values react sooner, while larger values avoid very broad early searches.">?</span></span>
+    <input type="number" min="0" max="20" step="1" title="The number of typed characters required before text search filtering starts. Smaller values react sooner, while larger values avoid very broad early searches." data-setting-path="search.minQueryLength" data-setting-type="number">
+</label>
+
+        </div>
+    </details>
+    <details class="settings-section" aria-label="Preview and Playlists">
+        <summary class="settings-section-title">Preview and Playlists</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-field" title="This is the delay between frames while a thumbnail hover preview is cycling. Lower values make previews animate more smoothly, but they also repaint more often and can use more CPU on large grids. Higher values are cheaper and calmer, but the preview will look choppier and may reveal less motion at a glance.">
+    <span class="settings-field-label">Preview frame interval ms<span class="settings-tooltip" title="This is the delay between frames while a thumbnail hover preview is cycling. Lower values make previews animate more smoothly, but they also repaint more often and can use more CPU on large grids. Higher values are cheaper and calmer, but the preview will look choppier and may reveal less motion at a glance." tabindex="0" aria-label="This is the delay between frames while a thumbnail hover preview is cycling. Lower values make previews animate more smoothly, but they also repaint more often and can use more CPU on large grids. Higher values are cheaper and calmer, but the preview will look choppier and may reveal less motion at a glance.">?</span></span>
+    <input type="number" min="100" max="10000" step="50" title="This is the delay between frames while a thumbnail hover preview is cycling. Lower values make previews animate more smoothly, but they also repaint more often and can use more CPU on large grids. Higher values are cheaper and calmer, but the preview will look choppier and may reveal less motion at a glance." data-setting-path="previews.hoverIntervalMs" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="How long playlist status messages stay visible. Shorter values clear the screen faster; longer values are easier to read.">
+    <span class="settings-field-label">Notification duration ms<span class="settings-tooltip" title="How long playlist status messages stay visible. Shorter values clear the screen faster; longer values are easier to read." tabindex="0" aria-label="How long playlist status messages stay visible. Shorter values clear the screen faster; longer values are easier to read.">?</span></span>
+    <input type="number" min="500" max="60000" step="500" title="How long playlist status messages stay visible. Shorter values clear the screen faster; longer values are easier to read." data-setting-path="playlists.notificationDurationMs" data-setting-type="number">
+</label>
+
+        </div>
+    </details>
+    <details class="settings-section" aria-label="Annotations">
+        <summary class="settings-section-title">Annotations</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-checkbox" title="Controls whether saved annotations are shown during normal playback. The editor can still show annotations while you are editing.">
+    <input type="checkbox" title="Controls whether saved annotations are shown during normal playback. The editor can still show annotations while you are editing." data-setting-path="annotations.visible" data-setting-type="boolean">
+    <span>Show annotations</span>
+    <span class="settings-tooltip" title="Controls whether saved annotations are shown during normal playback. The editor can still show annotations while you are editing." tabindex="0" aria-label="Controls whether saved annotations are shown during normal playback. The editor can still show annotations while you are editing.">?</span>
+</label>
+
+            <label class="settings-field" title="The starting duration for a newly created annotation. You can still adjust individual annotation start and end times.">
+    <span class="settings-field-label">Default duration seconds<span class="settings-tooltip" title="The starting duration for a newly created annotation. You can still adjust individual annotation start and end times." tabindex="0" aria-label="The starting duration for a newly created annotation. You can still adjust individual annotation start and end times.">?</span></span>
+    <input type="number" min="0.5" max="300" step="0.5" title="The starting duration for a newly created annotation. You can still adjust individual annotation start and end times." data-setting-path="annotations.defaultLengthSeconds" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="The default text color for new annotations. Existing annotations keep their saved colors unless edited.">
+    <span class="settings-field-label">Default text color<span class="settings-tooltip" title="The default text color for new annotations. Existing annotations keep their saved colors unless edited." tabindex="0" aria-label="The default text color for new annotations. Existing annotations keep their saved colors unless edited.">?</span></span>
+    <input type="color" title="The default text color for new annotations. Existing annotations keep their saved colors unless edited." data-setting-path="annotations.defaultColor" data-setting-type="color">
+</label>
+
+            <label class="settings-field" title="The default font family for new text annotations. This controls new annotations only.">
+    <span class="settings-field-label">Default font<span class="settings-tooltip" title="The default font family for new text annotations. This controls new annotations only." tabindex="0" aria-label="The default font family for new text annotations. This controls new annotations only.">?</span></span>
+    <select title="The default font family for new text annotations. This controls new annotations only." data-setting-path="annotations.defaultFont" data-setting-type="string">
+        <option value="system" title="The default font family for new text annotations. This controls new annotations only.">System</option>
+        <option value="serif" title="The default font family for new text annotations. This controls new annotations only.">Serif</option>
+        <option value="mono" title="The default font family for new text annotations. This controls new annotations only.">Mono</option>
+        <option value="hand" title="The default font family for new text annotations. This controls new annotations only.">Hand</option>
+    </select>
+</label>
+
+        </div>
+    </details>
+    <details class="settings-section" aria-label="Keyboard">
+        <summary class="settings-section-title">Keyboard</summary>
+        <div class="settings-section-body settings-grid">
+            <label class="settings-checkbox" title="Enables the J, K, and L keyboard shortcuts. Turn this off if those keys interfere with browsing or typing habits.">
+    <input type="checkbox" title="Enables the J, K, and L keyboard shortcuts. Turn this off if those keys interfere with browsing or typing habits." data-setting-path="keyboard.enabled" data-setting-type="boolean">
+    <span>Enable shortcuts</span>
+    <span class="settings-tooltip" title="Enables the J, K, and L keyboard shortcuts. Turn this off if those keys interfere with browsing or typing habits." tabindex="0" aria-label="Enables the J, K, and L keyboard shortcuts. Turn this off if those keys interfere with browsing or typing habits.">?</span>
+</label>
+
+            <label class="settings-field" title="How far J jumps backward. Smaller values are precise; larger values are better for scanning.">
+    <span class="settings-field-label">Rewind seconds<span class="settings-tooltip" title="How far J jumps backward. Smaller values are precise; larger values are better for scanning." tabindex="0" aria-label="How far J jumps backward. Smaller values are precise; larger values are better for scanning.">?</span></span>
+    <input type="number" min="1" max="600" step="1" title="How far J jumps backward. Smaller values are precise; larger values are better for scanning." data-setting-path="keyboard.rewindSeconds" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="How far L jumps forward. Smaller values are precise; larger values move through videos faster.">
+    <span class="settings-field-label">Forward seconds<span class="settings-tooltip" title="How far L jumps forward. Smaller values are precise; larger values move through videos faster." tabindex="0" aria-label="How far L jumps forward. Smaller values are precise; larger values move through videos faster.">?</span></span>
+    <input type="number" min="1" max="600" step="1" title="How far L jumps forward. Smaller values are precise; larger values move through videos faster." data-setting-path="keyboard.forwardSeconds" data-setting-type="number">
+</label>
+
+            <label class="settings-field" title="The minimum delay between repeated keyboard shortcut actions. Lower values respond faster when holding keys.">
+    <span class="settings-field-label">Repeat delay ms<span class="settings-tooltip" title="The minimum delay between repeated keyboard shortcut actions. Lower values respond faster when holding keys." tabindex="0" aria-label="The minimum delay between repeated keyboard shortcut actions. Lower values respond faster when holding keys.">?</span></span>
+    <input type="number" min="50" max="5000" step="10" title="The minimum delay between repeated keyboard shortcut actions. Lower values respond faster when holding keys." data-setting-path="keyboard.repeatMs" data-setting-type="number">
+</label>
+
+        </div>
+    </details>
+
+    <details class="settings-section" aria-label="Colors">
+        <summary class="settings-section-title">Colors</summary>
+        <div class="settings-section-body">
+            <div class="settings-color-toolbar">
+                <label class="settings-field" title="Choose a complete color scheme as a starting point. Editing any individual color changes the scheme to Custom.">
+                    <span class="settings-field-label">Preset<span class="settings-tooltip" title="Choose a complete color scheme as a starting point. Editing any individual color changes the scheme to Custom." tabindex="0" aria-label="Choose a complete color scheme as a starting point. Editing any individual color changes the scheme to Custom.">?</span></span>
+                    <select id="color-preset-select" class="settings-preset-select" title="Choose a complete color scheme as a starting point. Editing any individual color changes the scheme to Custom."></select>
+                </label>
+            </div>
+            <div id="color-settings-fields" class="settings-color-fields"></div>
+        </div>
+    </details>
+
+    <div class="settings-button-row">
+        <button type="button" id="settings-reset-colors-button" class="settings-button" title="Restores the default Sugar Hill color preset while leaving other settings alone.">Reset Colors</button>
+        <button type="button" id="settings-reset-button" class="settings-button" title="Clears saved browser settings and restores all defaults for this site.">Reset Settings</button>
+    </div>
+</main>
+    <script src="js/settings-page.js"></script>
+</body>
+</html>

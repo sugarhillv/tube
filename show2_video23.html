@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Hill Tube</title>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav-links.css">
+    <link rel="stylesheet" href="css/playlists.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/search-ui.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/sidebar-section.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/video-annotations.css">
+    <link rel="stylesheet" href="css/video-preview.css">
+    <script src="js/generator_config.js"></script>
+    <script src="js/site-settings.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-title">H480pCQ38 - Hw 023 - Gd Mrnng sshl</div>
+    <div class="header-search">
+        <div class="search-input-group">
+            <span class="search-icon">&#128269;</span>
+            <input id="search-input" type="text" placeholder="Search" class="search-input">
+        </div>
+    </div>
+    <div class="header-actions">
+        <a href="playlists.html" class="header-link">Playlists</a>
+        <a href="settings.html" class="header-link header-link-settings" aria-label="Settings">
+            <span class="header-link-icon" aria-hidden="true">&#9881;</span>
+        </a>
+        <a href="index.html" class="header-link">&larr; Back to All Videos</a>
+    </div>
+</header>
+<div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+        <div class="search-modal-header">
+            <div class="search-modal-title">Search Results: <span id="search-result-count" class="search-result-count">0</span></div>
+            <button id="search-modal-close" class="search-modal-close" type="button">&times;</button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <select id="show-filter" class="filter-select" aria-label="Filter by show">
+                        <option value="all">All Shows</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+    <select id="status-filter" class="filter-select" aria-label="Filter by watch status">
+        <option value="all">All Status</option>
+        <option value="unwatched">Unwatched</option>
+        <option value="inProgress">In Progress</option>
+        <option value="nearlyFinished">Nearly Finished</option>
+        <option value="completed">Finished</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="resolution-filter" class="filter-select" aria-label="Filter by resolution">
+        <option value="all">All Resolution</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="codec-filter" class="filter-select" aria-label="Filter by codec">
+        <option value="all">All Codecs</option>
+    </select>
+</div>
+                <div class="filter-group">
+    <select id="fps-filter" class="filter-select" aria-label="Filter by frame rate">
+        <option value="all">All FPS</option>
+    </select>
+</div>
+                <div class="filter-group filter-duration-group">
+                    <div class="filter-range-slider">
+    <div class="filter-range-track"></div>
+    <div id="duration-range-fill" class="filter-range-fill"></div>
+    <input id="duration-min" type="range" min="0" max="3600" value="0" class="filter-range-input filter-range-min">
+    <input id="duration-max" type="range" min="0" max="3600" value="3600" class="filter-range-input filter-range-max">
+</div>
+                    <div class="filter-range-labels"><span id="duration-min-label">0:00</span> - <span id="duration-max-label">60:00</span></div>
+                </div>
+                <div class="filter-group">
+    <select id="sort-filter" class="filter-select" aria-label="Sort search results">
+        <option value="relevance">Relevance</option>
+        <option value="recent">Recent</option>
+        <option value="progress">Progress</option>
+        <option value="duration_desc">Longest</option>
+        <option value="duration_asc">Shortest</option>
+        <option value="title">Title</option>
+        <option value="show">Show</option>
+    </select>
+</div>
+            </div>
+            <div id="search-results-container"></div>
+        </div>
+    </div>
+    <div id="search-modal-backdrop"></div>
+</div>
+<div class="container">
+    <div class="main-content">
+        <div class="video-player">
+            <div class="video-player-frame">
+                <video autoplay="" muted="" playsinline="" airplay="allow" x-webkit-airplay="allow" width="720" height="480"
+                    data-next-url="show2_video24.html"
+                    data-next-title="Hw 024 - Dm 2016 Rvw"
+                    data-fallback-url="show9_video1.html"
+                    data-fallback-title="2Flvrflsmk"
+                    data-duration="2903" data-preview-src="previews/show2_video23_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+                    <source src="file:///E:/videos/sugarhillvideoproject/videos/H480pCQ38/Hw%20023%20-%20Gd%20Mrnng%20sshl.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+<div class="video-controls" aria-label="Video controls">
+                    <div class="video-scrubber" data-preview-src="previews/show2_video23_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+                    <span class="video-scrubber-time" data-scrubber-current="">0:00</span>
+                    <input type="range" min="0" max="2903" value="0" step="0.1" class="video-scrubber-range" aria-label="Video scrubber">
+                    <div class="video-scrubber-preview" aria-hidden="true">
+                        <div class="video-scrubber-preview-image"></div>
+                    </div>
+                    <span class="video-scrubber-time" data-scrubber-duration="">48:23</span>
+                </div>
+
+    <div class="video-controls-row">
+        <button type="button" class="video-control-button video-icon-button" data-player-play="" aria-label="Play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-play" aria-hidden="true"><path d="M8 6.5v11l9-5.5z" fill="currentColor" stroke="none"></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-pause" aria-hidden="true" hidden=""><rect x="7" y="6" width="3.5" height="12" rx="1" fill="currentColor" stroke="none"><rect x="13.5" y="6" width="3.5" height="12" rx="1" fill="currentColor" stroke="none"></svg></button>
+        <div class="video-volume-control">
+            <button type="button" class="video-control-button video-icon-button" data-player-mute="" aria-label="Mute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-volume" aria-hidden="true"><path d="M5 10v4h4l5 4V6l-5 4z" fill="currentColor" stroke="none"><path d="M18 9a5 5 0 0 1 0 6" stroke-width="1.8" stroke-linecap="round"></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-muted" aria-hidden="true" hidden=""><path d="M5 10v4h4l5 4V6l-5 4z" fill="currentColor" stroke="none"><path d="M18 9l4 4m0-4l-4 4" stroke-width="1.8" stroke-linecap="round"></svg></button>
+            <div class="video-volume-popover">
+                <input type="range" min="0" max="1" step="0.01" value="1" class="video-volume-range" data-player-volume="" aria-label="Volume">
+            </div>
+        </div>
+        <div class="video-controls-right">
+            <div class="video-select-control">
+                <select data-player-speed="" aria-label="Playback speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected="">1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+            </div>
+            <button type="button" class="video-control-button video-icon-button video-annotation-button" data-player-annotations-visible-button="" aria-label="Show annotations" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-annotation" aria-hidden="true"><path d="M5 5h14v10H9l-4 4V5z" stroke-width="1.8" stroke-linejoin="round"><path d="M8 8h8M8 11h5" stroke-width="1.8" stroke-linecap="round"></svg></button>
+            <button type="button" class="video-control-button" hidden="" data-player-cast="" aria-label="Cast to TV">Cast to TV</button>
+            <button type="button" class="video-control-button pip-toggle-button" aria-pressed="false" aria-label="Toggle Picture-in-Picture">PiP</button>
+            <label class="video-autoplay-control">
+                <span>Autoplay:</span>
+                <span class="video-autoplay-switch">
+                    <input type="checkbox" checked="" data-player-autoplay-ended="" aria-label="Autoplay">
+                    <span class="video-autoplay-slider"></span>
+                </span>
+            </label>
+            <button type="button" class="video-control-button video-icon-button" data-player-fullscreen="" aria-label="Enter full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="video-icon video-icon-fullscreen" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m18 5h-5v-5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></svg></button>
+        </div>
+    </div>
+</div>            </div>
+        </div>
+        <h1 class="video-title">H480pCQ38 - Hw 023 - Gd Mrnng sshl</h1>
+        <section class="video-actions-panel playlist-panel"
+    data-video-id="H480pCQ38_video23"
+    data-video-title="H480pCQ38 - Hw 023 - Gd Mrnng sshl"
+    data-video-show="H480pCQ38"
+    data-video-url="show2_video23.html"
+    data-video-src="file:///E:/videos/sugarhillvideoproject/videos/H480pCQ38/Hw%20023%20-%20Gd%20Mrnng%20sshl.mp4"
+    data-video-duration="2903"
+    data-video-thumbnail="thumbnails/show2_video23_thumb.jpg"
+    data-video-preview-sprite="previews/show2_video23_sprite.jpg"
+    data-video-preview-frame-count="36"
+    data-video-preview-frame-width="320"
+    data-video-preview-frame-height="180"
+    data-video-preview-columns="4">
+    <div class="video-actions-primary">
+        <div class="playlist-modal-anchor">
+            <button type="button" class="playlist-toggle-button" aria-expanded="false" aria-haspopup="dialog">Playlist</button>
+            <div class="playlist-modal" hidden="hidden" role="dialog" aria-label="Playlist controls">
+                <div class="playlist-row playlist-row-existing">
+    <select class="playlist-select" aria-label="Select playlist">
+        <option value="">Select playlist</option>
+    </select>
+    <button type="button" class="playlist-add-button">Add</button>
+</div>
+                <button type="button" class="playlist-create-launch-button">+ Create New Playlist</button>
+            </div>
+        </div>
+        <button type="button" class="queue-add-current-button" data-queue-add-current="">Queue</button>
+        <button type="button" class="annotations-add-button annotations-editor-action" hidden="hidden" data-annotations-add="">Add Annotation</button>
+        <button type="button" class="annotations-export-button annotations-editor-action" hidden="hidden" data-annotations-export="">Export JSON</button>
+        <button type="button" class="annotations-import-button annotations-editor-action" hidden="hidden" data-annotations-import="">Import JSON</button>
+        <input type="file" accept=".json,application/json" class="annotations-import-input" hidden="hidden" data-annotations-import-input="">
+        <button type="button" class="annotations-save-button annotations-editor-action" hidden="hidden" data-annotations-save="">Save</button>
+        <a href="show2_video23.html?annotations=1" class="annotations-editor-button" hidden="hidden" data-annotations-editor-open="">Annotations</a>
+        <button type="button" class="copy-url-button">Copy URL</button>
+    </div>
+    <div class="playlist-create-overlay" hidden="hidden">
+        <div class="playlist-create-dialog" role="dialog" aria-label="Create new playlist">
+            <h3 class="playlist-create-title">Create New Playlist</h3>
+            <input type="text" class="playlist-create-input" placeholder="Playlist title" maxlength="80" aria-label="New playlist title">
+            <div class="playlist-create-actions">
+                <button type="button" class="playlist-create-confirm-button">Create</button>
+                <button type="button" class="playlist-create-cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</section>
+        <h2 class="video-metadata">H480pCQ38 - 48 minutes, 23 seconds (48:23)</h2>
+    </div>
+    <aside class="sidebar">
+    <div class="sidebar-section">
+        <div class="sidebar-label">Next</div>
+        <a href="show2_video24.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show2_video24_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show2_video24_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-2_video24" data-duration="34:12"></div>
+        <div class="video-item-duration">34:12</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Hw 024 - Dm 2016 Rvw</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">30 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="149 MB">580 kbps</span>
+</div>
+
+    </div>
+</a>
+
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-label">Previous</div>
+        <a href="show2_video22.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show2_video22_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show2_video22_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-2_video22" data-duration="13:50"></div>
+        <div class="video-item-duration">13:50</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Hw 022 - Rgn Vs Wnklnks</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">30 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="57.7 MB">557 kbps</span>
+</div>
+
+    </div>
+</a>
+
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-label">Recommended</div>
+        <a href="show9_video1.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show9_video1_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show9_video1_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-9_video1" data-duration="7:13"></div>
+        <div class="video-item-duration">7:13</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">2Flvrflsmk</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">29.97 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="30 MB">554 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show3_video1.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show3_video1_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show3_video1_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-3_video1" data-duration="27:17"></div>
+        <div class="video-item-duration">27:17</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Hwd 01 - Th (Hppy) Jnkm Sqnc</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">30 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="141 MB">688 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show8_video3.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show8_video3_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show8_video3_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-8_video3" data-duration="1:31:14"></div>
+        <div class="video-item-duration">1:31:14</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Shs 09 p09 - Th Flt rth Spcl</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);">23.98 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="252 MB">369 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show6_video17.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show6_video17_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show6_video17_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-6_video17" data-duration="18:42"></div>
+        <div class="video-item-duration">18:42</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Md Ywhppdmywf R10 (Crf 22, Grn)</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);">24 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="89.7 MB">640 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show5_video6.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show5_video6_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show5_video6_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-5_video6" data-duration="21:47"></div>
+        <div class="video-item-duration">21:47</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Ktv - S0106 - Crm Lds</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">30 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="112 MB">684 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show4_video2.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show4_video2_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show4_video2_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-4_video2" data-duration="30:12"></div>
+        <div class="video-item-duration">30:12</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Ktv2 02 - Bsnssnn R3 (Crf 27, Grn)</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);" title="H.265">720p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);">23.98 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);" title="282 MB">1.25 mbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show9_video20.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show9_video20_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show9_video20_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-9_video20" data-duration="2:00"></div>
+        <div class="video-item-duration">2:00</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Vlt 0024 Djksmvrvwsptrckswylyndrtydncng</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-6, #B8860B);">29.97 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="13.9 MB">926 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show7_video2.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show7_video2_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show7_video2_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-7_video2" data-duration="34:12"></div>
+        <div class="video-item-duration">34:12</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Dozing Off Again... [Hdmsovwfhig]</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);">23 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-9, #A52A2A);" title="47.5 MB">185 kbps</span>
+</div>
+
+    </div>
+</a>
+
+        <a href="show6_video10.html" class="video-item">
+    <div class="video-item-thumbnail-container" data-preview-src="previews/show6_video10_sprite.jpg" data-preview-frame-count="36" data-preview-frame-width="320" data-preview-frame-height="180" data-preview-columns="4">
+        <img src="thumbnails/show6_video10_thumb.jpg" alt="Thumbnail" class="video-item-thumbnail">
+        <div class="video-item-thumbnail-overlay" id="progress-bar-6_video10" data-duration="32:08"></div>
+        <div class="video-item-duration">32:08</div>
+    </div>
+    <div class="video-item-content">
+        <div class="video-item-title">Md Dstbngz-Svntnkcks R3 (Crf 25)</div>
+        <div class="video-item-badge-bar">
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);" title="H.265">480p</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-8, #8B4513);">23.98 fps</span>
+    <span class="video-item-badge" style="background-color: var(--color-badge-7, #A0522D);" title="158 MB">657 kbps</span>
+</div>
+
+    </div>
+</a>
+
+    </div>
+</aside>
+</div>
+    <script src="videos_index.js"></script>
+    <script src="js/imported_playlists.js"></script>
+    <script src="js/watch-progress.js"></script>
+    <script src="js/watch-dashboard.js"></script>
+    <script src="js/search-ui.js"></script>
+    <script src="js/playlists.js"></script>
+    <script src="js/watch-queue.js"></script>
+    <script src="js/keyboard-control.js"></script>
+    <script src="js/picture-in-picture.js"></script>
+    <script src="js/video-player-controls.js"></script>
+    <script src="js/video-annotations.js"></script>
+    <script src="js/video-preview.js"></script>
+    <script src="js/video-autoplay.js"></script>
+</body>
+</html>

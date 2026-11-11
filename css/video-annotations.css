@@ -1,0 +1,563 @@
+.video-annotation-button.is-off {
+    opacity: 0.55;
+}
+
+.video-annotation-button[aria-pressed="true"] {
+    border-color: var(--color-text-secondary);
+    background: color-mix(in srgb, var(--color-accent) 76%, transparent);
+}
+
+.annotations-save-button {
+    background: var(--color-accent) !important;
+    border-color: var(--color-text-muted) !important;
+}
+
+.video-player-frame.is-annotation-mode video {
+    filter: brightness(0.45) saturate(0.85);
+}
+
+.video-player-frame.is-annotation-mode::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 14;
+    box-sizing: border-box;
+    border: 4px dashed color-mix(in srgb, var(--color-text-primary) 86%, transparent);
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.video-player-frame.is-annotation-placement-mode,
+.video-player-frame.is-annotation-placement-mode video {
+    cursor: crosshair;
+}
+
+.video-player-frame.is-annotation-mode .video-controls {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-annotation-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+    pointer-events: none;
+}
+
+.video-annotation-layer[hidden] {
+    display: none;
+}
+
+.video-annotation {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 0;
+    border-radius: 1px;
+    background: color-mix(in srgb, var(--color-surface) 72%, transparent);
+    color: var(--color-text-primary);
+    font-size: 20px;
+    line-height: 1.35;
+    overflow: auto;
+    overflow-wrap: anywhere;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    white-space: pre-wrap;
+}
+
+.video-annotation.is-focused {
+    outline: 2px solid var(--color-success);
+    outline-offset: 2px;
+}
+
+.video-annotation--image {
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    text-shadow: none;
+}
+
+.video-annotation-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.video-annotation-editor {
+    position: absolute;
+    z-index: 30;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto minmax(40px, 1fr) auto;
+    gap: 4px;
+    min-width: 90px;
+    min-height: 64px;
+    padding: 4px;
+    border: 2px dashed color-mix(in srgb, var(--color-text-primary) 92%, transparent);
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.48);
+    color: var(--color-text-primary);
+    cursor: move;
+}
+
+.video-annotation-type-toggle {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    cursor: default;
+}
+
+.video-annotation-type-toggle label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 24px;
+    padding: 0 7px;
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 28%, transparent);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-text-primary);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.video-annotation-type-toggle input {
+    margin: 0;
+}
+
+.video-annotation-editor-body,
+.video-annotation-text-panel,
+.video-annotation-image-panel {
+    min-height: 0;
+}
+
+.video-annotation-editor-body {
+    height: 100%;
+}
+
+.video-annotation-text-panel,
+.video-annotation-image-panel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 4px;
+    height: 100%;
+}
+
+.video-annotation-image-panel {
+    grid-template-rows: minmax(0, 1fr);
+}
+
+.video-annotation-text-panel[hidden],
+.video-annotation-image-panel[hidden] {
+    display: none;
+}
+
+.video-annotation-format-toolbar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+    padding: 3px;
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 24%, transparent);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.34);
+    cursor: default;
+}
+
+.video-annotation-text,
+.video-annotation-url {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    padding: 8px;
+    resize: none;
+    border: 2px dashed color-mix(in srgb, var(--color-text-muted) 80%, transparent);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.58);
+    color: var(--color-text-primary);
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.35;
+    cursor: text;
+}
+
+.video-annotation-text:focus,
+.video-annotation-url:focus,
+.video-annotation-time-field input:focus {
+    border-color: var(--color-text-primary);
+    outline: none;
+}
+
+.video-annotation-text[aria-invalid="true"],
+.video-annotation-url[aria-invalid="true"] {
+    border-color: var(--color-error);
+}
+
+.video-annotation-editor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: default;
+}
+
+.video-annotation-time-fields,
+.video-annotation-actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.video-annotation-time-field,
+.video-annotation-style-field {
+    display: inline-grid;
+    gap: 3px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    line-height: 1;
+}
+
+.video-annotation-time-field input,
+.video-annotation-style-field select {
+    box-sizing: border-box;
+    width: 78px;
+    min-height: 30px;
+    padding: 4px 6px;
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 34%, transparent);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.58);
+    color: var(--color-text-primary);
+    font: inherit;
+    font-size: 13px;
+}
+
+.video-annotation-style-field input[type="color"] {
+    box-sizing: border-box;
+    width: 42px;
+    height: 30px;
+    padding: 3px;
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 34%, transparent);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.58);
+    cursor: pointer;
+}
+
+.video-annotation-style-field select {
+    width: 92px;
+}
+
+.video-annotation-format-toolbar .video-annotation-style-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.video-annotation-format-toolbar .video-annotation-style-field input[type="color"] {
+    width: 32px;
+    height: 24px;
+    padding: 2px;
+}
+
+.video-annotation-format-toolbar .video-annotation-style-field select {
+    width: 82px;
+    min-height: 24px;
+    padding: 2px 4px;
+}
+
+.video-annotation-style-field input[type="color"]:focus,
+.video-annotation-style-field select:focus {
+    border-color: var(--color-text-primary);
+    outline: none;
+}
+
+.video-annotation-actions button {
+    min-height: 30px;
+    padding: 0 10px;
+    border: 1px solid color-mix(in srgb, var(--color-text-primary) 34%, transparent);
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--color-surface) 86%, transparent);
+    color: var(--color-text-primary);
+    font: inherit;
+    cursor: pointer;
+}
+
+.video-annotation-actions button:first-child {
+    background: var(--color-accent);
+    border-color: var(--color-text-muted);
+}
+
+.video-annotation-actions button:hover,
+.video-annotation-actions button:focus-visible {
+    border-color: var(--color-text-primary);
+    outline: none;
+}
+
+.video-annotation-resize-handle {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    touch-action: none;
+}
+
+.video-annotation-resize-handle--n,
+.video-annotation-resize-handle--s {
+    left: 14px;
+    right: 14px;
+    height: 12px;
+    cursor: ns-resize;
+}
+
+.video-annotation-resize-handle--n {
+    top: -6px;
+}
+
+.video-annotation-resize-handle--s {
+    bottom: -6px;
+}
+
+.video-annotation-resize-handle--e,
+.video-annotation-resize-handle--w {
+    top: 14px;
+    bottom: 14px;
+    width: 12px;
+    cursor: ew-resize;
+}
+
+.video-annotation-resize-handle--e {
+    right: -6px;
+}
+
+.video-annotation-resize-handle--w {
+    left: -6px;
+}
+
+.video-annotation-resize-handle--ne,
+.video-annotation-resize-handle--se,
+.video-annotation-resize-handle--sw,
+.video-annotation-resize-handle--nw {
+    width: 18px;
+    height: 18px;
+}
+
+.video-annotation-resize-handle--ne {
+    top: -7px;
+    right: -7px;
+    cursor: nesw-resize;
+}
+
+.video-annotation-resize-handle--se {
+    right: -7px;
+    bottom: -7px;
+    cursor: nwse-resize;
+}
+
+.video-annotation-resize-handle--sw {
+    bottom: -7px;
+    left: -7px;
+    cursor: nesw-resize;
+}
+
+.video-annotation-resize-handle--nw {
+    top: -7px;
+    left: -7px;
+    cursor: nwse-resize;
+}
+
+.video-annotation-edit-frame {
+    position: absolute;
+    z-index: 30;
+    box-sizing: border-box;
+    border: 0;
+    outline: 2px dashed color-mix(in srgb, var(--color-text-primary) 92%, transparent);
+    outline-offset: 2px;
+    border-radius: 2px;
+    background: transparent;
+    cursor: move;
+    touch-action: none;
+}
+
+.video-annotation-placement-preview {
+    position: absolute;
+    z-index: 29;
+    box-sizing: border-box;
+    border: 2px dashed color-mix(in srgb, var(--color-accent) 78%, var(--color-text-primary));
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text-primary) 18%, transparent);
+    pointer-events: none;
+}
+
+.annotations-editor-sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 24px);
+    margin-bottom: 0;
+    min-height: 0;
+}
+
+.annotations-editor-pane {
+    flex: 0 0 auto;
+    margin-bottom: 14px;
+}
+
+.annotations-editor-pane .video-annotation-editor {
+    position: static;
+    z-index: auto;
+    min-width: 0;
+    min-height: 0;
+    padding: 10px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 6px;
+    cursor: default;
+}
+
+.annotations-editor-pane .video-annotation-editor-body {
+    min-height: 128px;
+}
+
+.annotations-editor-pane .video-annotation-text,
+.annotations-editor-pane .video-annotation-url {
+    min-height: 110px;
+}
+
+.annotations-editor-list {
+    display: grid;
+    flex: 1 1 auto;
+    gap: 8px;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.annotations-editor-empty {
+    color: var(--color-text-subtle);
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 8px 0;
+}
+
+.annotations-editor-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px;
+    align-items: stretch;
+}
+
+.annotations-editor-focus,
+.annotations-editor-delete {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 4px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    font: inherit;
+}
+
+.annotations-editor-focus {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+    min-width: 0;
+    min-height: 42px;
+    background: var(--color-surface);
+    padding: 8px;
+    text-align: left;
+}
+
+.annotations-editor-thumb {
+    grid-row: span 2;
+    width: 52px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 4px;
+    background: var(--color-black);
+}
+
+.annotations-editor-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.annotations-editor-time {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.annotations-editor-title {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--color-text-primary);
+    font-size: 13px;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.annotations-editor-delete {
+    background: var(--color-danger-surface);
+    border-color: var(--color-danger-border);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+.annotations-editor-item.is-active .annotations-editor-focus {
+    background: var(--color-success);
+    border-color: var(--color-text-secondary);
+}
+
+.annotations-editor-item.is-active .annotations-editor-time,
+.annotations-editor-item.is-active .annotations-editor-title {
+    color: var(--color-white);
+}
+
+.annotations-editor-item.is-focused .annotations-editor-focus {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-text-primary) 35%, transparent);
+}
+
+.annotations-editor-focus:hover,
+.annotations-editor-focus:focus-visible,
+.annotations-editor-delete:hover,
+.annotations-editor-delete:focus-visible {
+    border-color: var(--color-text-primary);
+    outline: none;
+}
+
+@media (max-width: 520px) {
+    .video-annotation-editor {
+        grid-template-rows: minmax(72px, 1fr) auto;
+        padding: 8px;
+    }
+
+    .video-annotation-time-field input {
+        width: 72px;
+    }
+
+    .video-annotation-style-field select {
+        width: 82px;
+    }
+
+    .video-annotation-actions button {
+        padding: 0 8px;
+    }
+
+    .annotations-editor-item {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .annotations-editor-delete {
+        min-height: 32px;
+    }
+}

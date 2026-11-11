@@ -1,0 +1,56 @@
+/* Header Styles */
+header {
+    background-color: var(--color-header-bg);
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    flex-shrink: 0;
+}
+
+.header-search {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.header-link {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface-raised);
+    border-radius: 4px;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: background-color 0.2s;
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.header-link:hover {
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border-strong);
+}
+
+.header-link-settings {
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 6px;
+}
+
+.header-link-icon {
+    font-size: 20px;
+    line-height: 1;
+}

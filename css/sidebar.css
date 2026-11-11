@@ -1,0 +1,32 @@
+/* Sidebar Container */
+.sidebar {
+    flex-shrink: 0;
+    height: 100vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 20vw;
+    }
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scrollbar-hover);
+}

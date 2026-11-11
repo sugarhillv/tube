@@ -1,0 +1,35 @@
+/* Container and Main Content Layout */
+.container {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 24px;
+    padding: 24px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+}
+
+.video-metadata {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    margin: 10px 0 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-black);
+    border-radius: 8px;
+    max-width: 100%;
+}

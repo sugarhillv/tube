@@ -1,0 +1,1 @@
+window.SUGARHILL_CONFIG = {"progressBars": {"visible": true, "saveIntervalMs": 2000, "resetThresholdPercentage": 0.04}};

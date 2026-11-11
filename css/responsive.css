@@ -1,0 +1,16 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100vw;
+    }
+
+    .shows-grid {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
